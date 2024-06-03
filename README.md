@@ -71,7 +71,7 @@ $ ./silence.py 1.wav -o parts/ -s
 ### Performance
 
 I assume the script works pretty fast, though there were no optimizations made.
-It takes about 3 seconds to split 1 hour of 2-channel 48kHz in ~60 second chunks,
+It takes about 1.5 seconds to split 1 hour of 2-channel 48kHz in ~60 second chunks,
 including compilation of the `silence.so` module. Note that overwriting segments is
 slower than creating new files so it is recommended to delete segments before next try.
 

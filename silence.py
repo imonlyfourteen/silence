@@ -5,7 +5,7 @@ import sys, os, argparse, wave
 # Compile and import the module
 mpath = os.path.join(os.path.dirname(__file__), 'silence')
 if not os.path.exists(mpath + '.so'):
-    comm = f'gcc -shared -fPIC `pkg-config --cflags python3` "{mpath}.c" -lm -lpython3 -o "{mpath}.so"'
+    comm = f'gcc -O2 -shared -fPIC `pkg-config --cflags python3` "{mpath}.c" -lm -lpython3 -o "{mpath}.so"'
     ret = os.system(comm)
     if ret != 0:
         raise Exception('Could not compile the "silence.so" module.')
